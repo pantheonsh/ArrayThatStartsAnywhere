@@ -1,0 +1,22 @@
+{
+  "name": "array-that-starts-anywhere",
+  "version": "1.0.1",
+  "description": "How about an array that starts at Math.PI?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pantheonsh/ArrayThatStartsAnywhere.git"
+  },
+  "keywords": [
+    "Array"
+  ],
+  "author": "pantheonsh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pantheonsh/ArrayThatStartsAnywhere/issues"
+  },
+  "homepage": "https://github.com/pantheonsh/ArrayThatStartsAnywhere#readme"
+}
