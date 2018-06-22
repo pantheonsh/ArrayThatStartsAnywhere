@@ -32,6 +32,10 @@ arr.push("captain");
 arr.filter(i => i === "ay"); // => {72: "ay", 73: "ay", 74: "ay", 75: "ay", startIndex: 72, length: 4}
 ```
 
+## Custom methods
+`ArrayThatStartsAt#keys`
+`ArrayThatStartsAt#asABoringJSArrayWhyAreYouEvenUsingThisFunctionIfYouCanHaveArraysThatStartWhereverYouWant`
+
 ## More fun
 ```js
 let arr = new ArrayThatStartsAt(Math.PI);
