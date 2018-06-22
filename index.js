@@ -89,7 +89,7 @@
             let foundIndex = -1;
             
             this.forEach((value, index, arr) => {
-                if(!found && testFunc.apply(thisArg, [value, index, arr])) {
+                if(!found && (thisArg ? testFunc(value, index, arr) : testFunc.apply(thisArg, [value, index, arr]))) {
                     found = true;
                     foundIndex = index;
                 }
@@ -102,23 +102,23 @@
             return this[this.findIndex(testFunc, thisArg)];
         }
     
-        map (testFunc = () => {}, thisArg = undefined) {
+        map (testFunc = () => {}, thisArg) {
             let newarr = new ArrayThatStartsAt(this.startIndex);
     
             this.forEach((value, index, arr) => {
-                let testResult = testFunc.apply(thisArg, [value, index, arr]);
+                let testResult = thisArg ? testFunc(value, index, arr) : testFunc.apply(thisArg, [value, index, arr]);
                 newarr.push(value);
             });
     
             return newarr;
         }
     
-        filter (testFunc = () => {}, thisArg = undefined) {
+        filter (testFunc = () => {}, thisArg) {
             let keys = this.keys();
             let newarr = new ArrayThatStartsAt(this.startIndex);
     
-            keys.forEach((value, index, arr) => {
-                if(testFunc.apply(thisArg, [value, index, arr])) newarr.push(value);
+            this.forEach((value, index, arr) => {
+                if(thisArg ? testFunc(value, index, arr) : testFunc.apply(thisArg, [value, index, arr])) newarr.push(value);
             });
     
             return newarr;
