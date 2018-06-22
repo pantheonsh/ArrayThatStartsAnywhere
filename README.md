@@ -2,8 +2,11 @@
 How about an array that starts at Math.PI?
 
 Node.js
+```bash
+npm install array-that-starts-anywhere
+```
 ```js
-const ArrayThatStartsAt = require("./index.js").ArrayThatStartsAt;
+const ArrayThatStartsAt = require("array-that-starts-anywhere").ArrayThatStartsAt;
 
 let arr = new ArrayThatStartsAt(72);
 arr.push("ay");
